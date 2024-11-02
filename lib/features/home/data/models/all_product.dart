@@ -35,6 +35,7 @@ class RatingModel {
   RatingModel({
     required this.rate,
     required this.count,
+
   });
 
   factory RatingModel.fromJson(jsonData) {
