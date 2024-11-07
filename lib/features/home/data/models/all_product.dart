@@ -1,3 +1,5 @@
+import 'package:store_app/core/api/end_points.dart';
+
 class AllProductModel {
   final int id;
   final String title;
@@ -17,12 +19,12 @@ class AllProductModel {
 
   factory AllProductModel.fromJson(jsonData) {
     return AllProductModel(
-      id: jsonData['id'],
-      title: jsonData['title'],
-      image: jsonData['image'],
-      description: jsonData['description'],
-      price: jsonData['price'],
-      rating: RatingModel.fromJson(jsonData['rating']),
+      id: jsonData[ApiKeys.id],
+      title: jsonData[ApiKeys.title],
+      image: jsonData[ApiKeys.image],
+      description: jsonData[ApiKeys.description],
+      price: jsonData[ApiKeys.price],
+      rating: RatingModel.fromJson(jsonData[ApiKeys.rating]),
     );
   }
 }
