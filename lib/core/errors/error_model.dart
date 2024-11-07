@@ -1,7 +1,7 @@
 import 'package:store_app/core/api/end_points.dart';
 
 class ErrorModel {
-  int status;
+  String status;
   String message;
 
   ErrorModel({required this.status, required this.message});

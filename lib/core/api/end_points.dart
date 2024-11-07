@@ -17,5 +17,6 @@ class ApiKeys {
   static const String status = 'status';
   static const String message = 'message';
   static const String categoryName = '';
+  static const String idProduct = '';
 
 }
