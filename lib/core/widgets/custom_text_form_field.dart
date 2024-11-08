@@ -13,9 +13,9 @@ class CustomTextFormFiled extends StatelessWidget {
   final TextStyle? labelTextStyle;
   final TextStyle? inputTextStyle;
   final Color? borderColor;
+  final Color? enabledBorderColor;
+  final Color? focusedBorderColor;
   final Color? cursorColor;
-  final String? Function(String?) validator;
-  final void Function(String)? onFieldSubmitted;
 
   const CustomTextFormFiled({
     super.key,
@@ -31,21 +31,16 @@ class CustomTextFormFiled extends StatelessWidget {
     this.borderRadius,
     this.inputTextStyle,
     this.borderColor,
-    this.cursorColor,
-    required this.validator,
-    this.onFieldSubmitted,
+    this.cursorColor, this.enabledBorderColor, this.focusedBorderColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      onFieldSubmitted: onFieldSubmitted,
       style: inputTextStyle,
       cursorColor: cursorColor,
-      validator: validator,
       controller: customController,
       keyboardType: type,
-      obscureText: secure!,
       decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius!),
@@ -53,19 +48,13 @@ class CustomTextFormFiled extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius!),
             borderSide: BorderSide(
-              color: borderColor!,
+              color: focusedBorderColor!,
             ),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius!),
             borderSide: BorderSide(
-              color: borderColor!,
-            ),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(borderRadius!),
-            borderSide: BorderSide(
-              color: borderColor!,
+              color: enabledBorderColor!,
             ),
           ),
           hintText: hint,

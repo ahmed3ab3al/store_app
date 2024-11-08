@@ -73,7 +73,7 @@ class StoreCubit extends Cubit<StoreStates> {
   }
 
 
-  updateProduct({int? id, String? title, String? price, String? description, String? image, String? category}) async {
+ Future<AllProductModel?> updateProduct({int? id, String? title, String? price, String? description, String? image, String? category}) async {
     emit(UpdateProductLoadingState());
     try {
       final Map<String, dynamic> response = await api.put(

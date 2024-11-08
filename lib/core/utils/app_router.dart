@@ -12,10 +12,12 @@ abstract class AppRouter {
         path: '/',
         builder: (context, state) => const HomePage(),
       ),
-      // GoRoute(
-      //   path: update,
-      //   builder: (context, state) =>  UpdateView(),
-      // ),
+      GoRoute(
+        path: update,
+        builder: (context, state) =>  UpdateView(
+         category:  state.extra.toString()
+        ),
+      ),
     ],
   );
 }

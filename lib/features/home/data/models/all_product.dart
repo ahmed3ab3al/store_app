@@ -7,8 +7,10 @@ class AllProductModel {
   final String description;
   final dynamic price;
   final RatingModel rating;
+  final String category;
 
   AllProductModel({
+    required this.category,
     required this.id,
     required this.title,
     required this.image,
@@ -19,6 +21,7 @@ class AllProductModel {
 
   factory AllProductModel.fromJson(jsonData) {
     return AllProductModel(
+      category: jsonData[ApiKeys.category],
       id: jsonData[ApiKeys.id],
       title: jsonData[ApiKeys.title],
       image: jsonData[ApiKeys.image],
