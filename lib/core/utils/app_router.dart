@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:store_app/features/home/data/models/all_product.dart';
 import 'package:store_app/features/home/presentation/views/update_view.dart';
 import '../../features/home/presentation/views/home_page.dart';
 
@@ -15,7 +16,7 @@ abstract class AppRouter {
       GoRoute(
         path: update,
         builder: (context, state) =>  UpdateView(
-         category:  state.extra.toString()
+         category:  state.extra as AllProductModel,
         ),
       ),
     ],

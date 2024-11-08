@@ -11,7 +11,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        GoRouter.of(context).pushReplacement(AppRouter.update,extra: productModel.category);
+        GoRouter.of(context).pushReplacement(AppRouter.update,extra: productModel,);
       },
       child: Stack(
         clipBehavior: Clip.none,
