@@ -14,12 +14,12 @@ class DioHelper extends ApiHelper {
     dio.options.baseUrl = EndPoints.baseUrl;
     dio.interceptors.add(ApiInterceptors());
     dio.interceptors.add(LogInterceptor(
-      request: true,
-      requestHeader: true,
-      requestBody: true,
-      responseHeader: true,
-      responseBody: true,
-      error: true,
+      // request: true,
+      // requestHeader: true,
+      // requestBody: true,
+      // responseHeader: true,
+      // responseBody: true,
+      // error: true,
     ));
   }
   @override

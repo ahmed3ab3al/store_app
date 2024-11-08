@@ -1,11 +1,11 @@
 import 'package:store_app/core/api/end_points.dart';
 
 class AllProductModel {
-  final int id;
+  final dynamic id;
   final String title;
   final String image;
   final String description;
-  final double price;
+  final dynamic price;
   final RatingModel rating;
 
   AllProductModel({
@@ -31,8 +31,8 @@ class AllProductModel {
 
 
 class RatingModel {
-  final double rate;
-  final int count;
+  final dynamic rate;
+  final dynamic count;
 
   RatingModel({
     required this.rate,
